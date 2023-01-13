@@ -2,6 +2,9 @@ import styles from "./Eventos.module.css";
 import React, { useState } from "react";
 import Add from "../../assets/more.png";
 
+import { TableFooter } from "../Table/TableFooter/TableFooter";
+import { CloseOutlined, DeleteOutlined, EditOutlined } from "@ant-design/icons";
+ 
 export function Eventos({ title }) {
   const [popup, setPop] = useState(false);
   const [fontValue, setFontes] = useState();
@@ -127,13 +130,15 @@ export function Eventos({ title }) {
               </div>
             </div>
 
-            <div className={styles.applyButton}>
-              <button className={styles.addButton} id={styles.applyButton}>Adicionar</button>
+            <div className={styles.buttons}>
+              <div className={styles.applyButton}>
+                <button className={styles.addButton} id={styles.applyButton}>Adicionar</button>
+              </div>
+              <div className={styles.closeButton}>
+                <button className={styles.abortButton} id={styles.closeButton} onClick={closePopup}>Cancelar e fechar</button>
+              </div>
             </div>
-            <div className={styles.closeButton}>
-              <button className={styles.abortButton} id={styles.closeButton} onClick={closePopup}>Cancelar e fechar</button>
-            </div>
-          
+      
           </div>
         </div>:""}
       </div>

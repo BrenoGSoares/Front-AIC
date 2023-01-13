@@ -26,7 +26,7 @@
   background: var(--white-200);
   border: 1px solid var(--grey-200);
   border-radius: 5px;
-}
+  }
 
 .backgroundPopup {
   background: var(--black-background);
@@ -132,10 +132,16 @@ select:invalid {
   display: none;
 }
 
-.addButton {
+.buttons{
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.addButton {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
   background: var(--orange-500);
   height: 44px;
   width: 344px;
@@ -145,7 +151,7 @@ select:invalid {
 .applyButton {
   display: flex;
   justify-content: center;
-  margin: 4rem 0;
+  margin: 1rem 0 0 0;
 }
 
 #applyButton {
@@ -157,9 +163,11 @@ select:invalid {
 }
 
 .closeButton {
+  /*
   display: flex;
   justify-content: center;
-  margin: 0 0 4rem 0;
+  */
+  margin: 1rem 0 1rem 0;
 }
 
 .abortButton {
@@ -195,7 +203,7 @@ select:invalid {
 }
 
 .addCausaConsequencia {
-  margin-top: 10px;
+  margin: 10px 0 0 0;
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
